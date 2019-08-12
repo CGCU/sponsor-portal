@@ -3,7 +3,7 @@ include ./layout.pug
   .row.align-items-center.justify-content-center
     .col-lg-6.col-sm-10.mt-5.login.logo
       .row.align-items-start.justify-content-center
-        img.d-inline-block(src="/assets/images/docsoc-sf-logo.svg" width="50" style="vertical-align: sub;")
+        img.d-inline-block(src="/assets/images/CGCU-complex.png" width="50" style="vertical-align: sub;")
         .display-4.d-inline-block.ml-2 Sponsors Portal
   .row.align-items-center.justify-content-center
     .col-lg-6.col-sm-10.mt-5.login
@@ -22,19 +22,19 @@ include ./layout.pug
             .col
               if err && member
                 .error #{err}
-              else 
+              else
                 br
           .row.mt-3.mb-5
             .col
               .row.justify-content-center
-                label(for="user").col-12 
-                  h2 Username: 
+                label(for="user").col-12
+                  h2 Username:
                 input.form-control(autofocus autocomplete='on' placeholder='Username' type="text" name="user").col-6.center
           .row.mt-5
             .col
               .row.justify-content-center
-                label(for="pass").col-12 
-                  h2 Password: 
+                label(for="pass").col-12
+                  h2 Password:
                 input.form-control(autocomplete='on' placeholder='Password' type="password", name="pass").col-6.center
           .row.mt-5.mb-5
             .col
@@ -48,19 +48,19 @@ include ./layout.pug
             .col
               if err && !member
                 .error #{err}
-              else 
+              else
                 br
           .row.mt-3.mb-5
             .col
               .row.justify-content-center
-                label(for="user").col-12 
-                  h2 Username: 
+                label(for="user").col-12
+                  h2 Username:
                 input.form-control(autocomplete='on' placeholder='Username' type="text", name="user").col-6.center
           .row.mt-5
             .col
               .row.justify-content-center
-                label(for="pass").col-12 
-                  h2 Password: 
+                label(for="pass").col-12
+                  h2 Password:
                 input.form-control(autocomplete='on' placeholder='Password' type="password", name="pass").col-6.center
           .row.mt-5.mb-5
             .col
