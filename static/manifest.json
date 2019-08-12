@@ -1,9 +1,9 @@
 {
-  "short_name": "DoCSoc Portal",
-  "name": "DoCSoc Portal",
+  "short_name": "CGCU Sponsor Portal",
+  "name": "CGCU Sponsor Portal",
   "icons": [
     {
-      "src": "/assets/images/docsoc-sf-logo.png",
+      "src": "/assets/images/CGCU-complex.png",
       "sizes": "192x192",
       "type": "image/png"
     }
@@ -13,4 +13,4 @@
   "orientation": "portrait",
   "background_color": "#225590",
   "theme_color": "#225590"
-} 
+}
