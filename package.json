@@ -6,7 +6,7 @@
     "start": "node app.js",
     "local": "node app.js --dev"
   },
-  "author": "George Soteriou",
+  "author": "George Soteriou, Raghav Khanna",
   "license": "ISC",
   "dependencies": {
     "archiver": "^3.0.0",
@@ -56,11 +56,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/georgesoteriou/DocSoc-portal.git"
+    "url": "git+https://github.com/CGCU/sponsor-portal.git"
   },
   "bugs": {
-    "url": "https://github.com/georgesoteriou/DocSoc-portal/issues"
+    "url": "https://github.com/CGCU/sponsor-portal/issues"
   },
-  "homepage": "https://github.com/georgesoteriou/DocSoc-portal#readme",
+  "homepage": "https://github.com/CGCU/sponsor-portal#readme",
   "description": ""
 }
