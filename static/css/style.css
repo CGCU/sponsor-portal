@@ -34,7 +34,7 @@ h1, h2, h3, h4 {
 }
 
 .header{
-  background-color: #225590;
+  background-color: #c11919;
   color: white;
 }
 
@@ -57,7 +57,7 @@ textarea {
 /* === LOGIN === */
 
 .login{
-  background-color: #225590;
+  background-color: #c11919;
   text-align: center;
   border-radius: 5px;
   margin: auto;
@@ -84,7 +84,7 @@ textarea {
 
 .login .login-tab{
   height: 60px;
-  background-color: #59d;
+  background-color: #fd6d6d;
   vertical-align: middle;
   line-height: 60px;
   font-size: 1.5em;
@@ -96,7 +96,7 @@ textarea {
 }
 
 .login .active-tab{
-  background-color: #225590;
+  background-color: #c11919;
 }
 
 .center{
@@ -206,14 +206,14 @@ textarea {
   overflow: hidden;
 }
 
-.sidebar-box .read-more { 
-  position: absolute; 
-  bottom: 0; 
+.sidebar-box .read-more {
+  position: absolute;
+  bottom: 0;
   left: 0;
-  width: 100%; 
-  text-align: center; 
-  margin: 0; padding: 30px 0; 
-	
+  width: 100%;
+  text-align: center;
+  margin: 0; padding: 30px 0;
+
   /* "transparent" only works here because == rgba(0,0,0,0) */
   background-image: linear-gradient(to bottom, transparent, white);
 }
@@ -310,7 +310,7 @@ input:checked + .slider:before {
 @media screen and (min-width: 1200px) {
   body {
       font-size: 1.2rem !important
-  }  
+  }
   .hide-small{
     font-size: inherit;
   }
