@@ -1,5 +1,5 @@
 include ./layout.pug
-h1 Hello there DoCSoc
+h1 Hello there CGCU
 
 form(method="post" action="/logout")
   button.btn.btn-primary(type='submit') Logout
@@ -10,22 +10,22 @@ form(method="post" action="/logout")
       form(method="post" action="/admin/new-sponsor")
         h1 Add a new sponsor:
           div.form-group
-            label(for="user") Username: 
+            label(for="user") Username:
             input.form-control(type="text", placeholder="Sponsor Username", name="user")
           div.form-group
-            label(for="name") Name: 
+            label(for="name") Name:
             input.form-control(type="text", placeholder="Sponsor Username", name="name")
           div.form-group
-            label(for="pass") Password: 
+            label(for="pass") Password:
             input.form-control(type="password", name="pass")
           div.form-group
-            label(for="rank") Rank: 
+            label(for="rank") Rank:
             select(name="rank").form-control
               option(value="Gold") Gold
               option(value="Silver") Silver
               option(value="Bronze") Bronze
           div.form-group
-            label(for="bespoke") Bespoke: 
+            label(for="bespoke") Bespoke:
             select(name="bespoke").form-control
               option(value="true") true
               option(value="false") false
@@ -33,7 +33,7 @@ form(method="post" action="/logout")
 
 h1.mt-5 Sponsors
 table(style = "width:100%").mt-4
-  tr 
+  tr
     th username
     th password
     th name
@@ -67,7 +67,7 @@ table(style = "width:100%").mt-4
           textarea.form-control(type="text", name="s.info.description" style="height: 120px !important;")=s.info.description
         th
           input.form-control(type="text", name="s.info.link", value=s.info.link)
-        th 
+        th
           if(s.news.length > 0)
             table(style = "width:100%")
               tr
@@ -81,16 +81,16 @@ table(style = "width:100%").mt-4
                     textarea.form-control(type="text" disabled style="height: 120px !important;")=n.text
                   th
                     a(href=n.link) Link
-        th 
+        th
           if(s.positions.length > 0)
             table(style = "width:100%")
-              tr 
+              tr
                 th name
                 th description
-                th link 
+                th link
                 th users
               each p,i in s.positions
-                tr 
+                tr
                   th
                     input.form-control(type="text", name="p.id."+i, value=p.name).d-none
                     input.form-control(type="text", name="p.name."+i, value=p.name)
@@ -98,14 +98,14 @@ table(style = "width:100%").mt-4
                     textarea.form-control(type="text", name="p.description."+i style="height: 120px !important;")=p.description
                   th
                     input.form-control(type="text", name="p.link."+i, value=p.link)
-                  th 
+                  th
                     if(p.users.length > 0)
                       table(style = "width:100%")
-                        tr   
+                        tr
                           th username
                           th # of documents
                         each u in p.users
-                          tr   
+                          tr
                             th=u.username
                             th=u.documents.length
       tr

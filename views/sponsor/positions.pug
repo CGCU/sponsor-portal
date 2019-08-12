@@ -1,12 +1,12 @@
-#positions.tab-pane.fade.show(role='tabpanel', aria-labelledby='positions-tab' class=(sponsor.info.rank === 'Bronze' ? '' : 'active')) 
+#positions.tab-pane.fade.show(role='tabpanel', aria-labelledby='positions-tab' class=(sponsor.info.rank === 'Bronze' ? '' : 'active'))
   .container-fluid
     .row.justify-content-center
       .col-lg-7.col-sm-10.text-center.mb-4
-        h3.small-font 
-          | By adding a new opportunity here, DoCSoc members will be able to read about the opportunity through the portal.
-          | You can choose to allow members to apply for the opportunity by providing the necessary documents directly through our portal, 
-          | or you can give a link that will show members where they can go to apply. 
-          | If you choose to allow members to apply through our portal, 
+        h3.small-font
+          | By adding a new opportunity here, CGCU members will be able to read about the opportunity through the portal.
+          | You can choose to allow members to apply for the opportunity by providing the necessary documents directly through our portal,
+          | or you can give a link that will show members where they can go to apply.
+          | If you choose to allow members to apply through our portal,
           | you will then be able to see who applied below, and download all the documents they provided.
     .row.justify-content-center
       .col-lg-8.col-sm-11
@@ -17,16 +17,16 @@
               .row.justify-content-center
                 .col-12.live
                   .row.mt-2.mb-2
-                    label.col-lg-3.col-sm-4(for="name") Title: 
+                    label.col-lg-3.col-sm-4(for="name") Title:
                     input.form-control.col-lg-8.col-sm-7.title(autocomplete='off' placeholder='Title' type="text", name="name")
                   .row.mt-2.mb-2
-                    label.col-lg-3.col-sm-4(for="link") Link to learn more: 
-                      .subtext (optional) 
+                    label.col-lg-3.col-sm-4(for="link") Link to learn more:
+                      .subtext (optional)
                     input.form-control.col-lg-8.col-sm-7.link(placeholder='Link' type="text", name="link")
                   .row.mt-2.mb-2
                     .col-lg-3.col-sm-4
                       label(for="description") Information:
-                        .subtext (optional) 
+                        .subtext (optional)
                       .subtext (Works with Markdown. [#[a(target="_blank" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet") more]])
                     textarea.form-control.col-lg-8.col-sm-7.text(autocomplete='off' placeholder='* Description \n* Who is this for \n* Documents required to apply' type="text", name="description")
                   .row.mt-2.mb-2
@@ -37,7 +37,7 @@
                     .col-lg-8.col-sm-7.pt-lg-1.text#checkbox_text Allow applications through our portal (Remember to check back later to see who applied)
                   #apply_link
                     .row.mt-2.mb-2
-                      label.col-lg-3.col-sm-4(for="link") Apply Link/Email: 
+                      label.col-lg-3.col-sm-4(for="link") Apply Link/Email:
                       input.form-control.col-lg-8.col-sm-7.apply-link(placeholder='Apply Link/Email' type="text", name="apply_link")
                   .row.mt-2.mb-2
                     .col-12.h4 Live Preview:
@@ -48,7 +48,7 @@
                           h1.card-title.preview-title
                           .mb-3
                             a(target="_blank").card-link.preview-link
-                          .card-text 
+                          .card-text
                             .preview-text
                   .row.justify-content-center.mt-2.mb-2
                     button.btn.btn-primary.btn-lg.col-10(type='submit' disabled) Add
@@ -66,7 +66,7 @@
                   if(position.users.length > 0)
                     .col-1
                       form(action="/sponsor/download/pos/" + position.name method="post")
-                        button.btn.btn-primary(type='submit') Download All 
+                        button.btn.btn-primary(type='submit') Download All
                           span.octicon.octicon-desktop-download
                 if(position.link)
                   a.card-link(href=position.link)
@@ -74,13 +74,13 @@
                     |  Link
                 .card-text.render-md.mt-3(value = position.description)
                 form.col-1(action="/sponsor/remove-position/" + position.name method="post")
-                  button.btn.btn-danger(type='submit') Delete 
-                    span.octicon.octicon-trashcan   
+                  button.btn.btn-danger(type='submit') Delete
+                    span.octicon.octicon-trashcan
             if(position.users.length > 0)
               ul.list-group.list-group-flush
-                li.list-group-item  
+                li.list-group-item
                   a.apply-dropdown(href="#")
-                    h4 DoCSoc Members That Have Applied (#{position.users.length}) 
+                    h4 CGCU Members That Have Applied (#{position.users.length})
                       span.octicon.octicon-chevron-down
                 li.list-group-item.apply.d-none
                   each user in position.users
@@ -93,12 +93,12 @@
                               a.card-link(href="mailto:"+user.email)=user.email
                             .col-2
                               form(action="/sponsor/download/user/" + position.name + '/' + user.firstname + ' ' + user.surname + ' ' + user.username method="post")
-                                button.btn.btn-primary(type='submit') 
+                                button.btn.btn-primary(type='submit')
                                   span.octicon.octicon-desktop-download
                         ul.list-group.list-group-flush
-                          li.list-group-item  
+                          li.list-group-item
                             a.apply-dropdown(href="#")
-                              h5 Documents 
+                              h5 Documents
                                 span.octicon.octicon-chevron-down
                           .apply.d-none
                             each document in user.documents
@@ -107,5 +107,5 @@
                                   .col-10=document.name
                                   .col-2
                                     form(action="/sponsor/show/" + position.name + '/' + user.firstname + ' ' + user.surname + ' ' + user.username + '/' + document.name method="post")
-                                      button.btn.btn-primary(type='submit') 
+                                      button.btn.btn-primary(type='submit')
                                         span.octicon.octicon-eye

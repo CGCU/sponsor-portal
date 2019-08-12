@@ -2,7 +2,7 @@
   .container-fluid
     .row.justify-content-center
       .col-lg-7.col-sm-10.text-center.mb-4
-        h3.small-font All news posted here will be available for all DoCSoc members to see.
+        h3.small-font All news posted here will be available for all CGCU members to see.
     .row.justify-content-center
       .col-lg-8.col-sm-11
         .card
@@ -10,28 +10,28 @@
             h2.card-title Add New News Post:
             form(method="post" action="/sponsor/add-news").live
               .row.mt-2.mb-2
-                label.col-lg-3.col-sm-4(for="title") Title: 
+                label.col-lg-3.col-sm-4(for="title") Title:
                 input.form-control.col-lg-8.col-sm-7.title(autocomplete='off' placeholder='Title' type="text", name="title")
               .row.mt-2.mb-2
-                label.col-lg-3.col-sm-4(for="link") Link to learn more: 
+                label.col-lg-3.col-sm-4(for="link") Link to learn more:
                   .subtext (optional)
                 input.form-control.col-lg-8.col-sm-7.link(placeholder='Link' type="text", name="link")
               .row.mt-2.mb-2
                 .col-lg-3.col-sm-4
-                  label(for="text") Article: 
+                  label(for="text") Article:
                     .subtext (optional)
                   .subtext (Works with Markdown. [#[a(target="_blank" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet") more]])
                 textarea.form-control.col-lg-8.col-sm-7.text(autocomplete='off' placeholder='Article' type="text", name="text")
               .row.mt-2.mb-2
                 .col-12.h4 Live Preview:
-                  .subtext (This is what DoCSoc members will see)
+                  .subtext (This is what CGCU members will see)
                 .col-12
                   .card.mt-2.preview
                     .card-body
                       h1.card-title.preview-title
                       .mb-3
                         a(target="_blank").card-link.preview-link
-                      .card-text 
+                      .card-text
                         .preview-text
               .row.justify-content-center.mt-2.mb-2
                 button.btn.btn-primary.btn-lg.col-10(type='submit' disabled) Add
@@ -51,6 +51,5 @@
                     |  Link
                 .card-text.render-md.mt-3(value = news.text)
                 form(action="/sponsor/remove-news/" + news.date method="post")
-                  button.btn.btn-danger(type='submit') Delete 
-                    span.octicon.octicon-trashcan   
-              
+                  button.btn.btn-danger(type='submit') Delete
+                    span.octicon.octicon-trashcan
