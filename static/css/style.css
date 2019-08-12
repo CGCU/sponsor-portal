@@ -28,6 +28,11 @@ h1, h2, h3, h4 {
   border-radius: 5px;
 }
 
+.btn-primary{
+    background-color: #c11919 !important;
+  border-color: #c11919 !important;
+}
+
 .inactiveLink {
   pointer-events: none;
   cursor: default;
